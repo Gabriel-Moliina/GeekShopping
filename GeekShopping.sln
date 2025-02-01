@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{A22E431A-90BC-40FE-ADC3-7A999C2A187D}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.Web", "GeekShopping.Web\GeekShopping.Web.csproj", "{F0BC52F3-3B7C-4A39-AF98-4F7F2C4F0C86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.ProductAPI", "GeekShopping.ProductAPI\GeekShopping.ProductAPI.csproj", "{F8DA9627-4A29-46A4-9172-D9E33B1AB80F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.IdentityServer", "GeekShopping.IdentityServer\GeekShopping.IdentityServer.csproj", "{107D59B0-B933-4D70-902B-6BC14B935826}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{F8DA9627-4A29-46A4-9172-D9E33B1AB80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8DA9627-4A29-46A4-9172-D9E33B1AB80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8DA9627-4A29-46A4-9172-D9E33B1AB80F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{107D59B0-B933-4D70-902B-6BC14B935826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{107D59B0-B933-4D70-902B-6BC14B935826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{107D59B0-B933-4D70-902B-6BC14B935826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{107D59B0-B933-4D70-902B-6BC14B935826}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +38,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F0BC52F3-3B7C-4A39-AF98-4F7F2C4F0C86} = {A22E431A-90BC-40FE-ADC3-7A999C2A187D}
 		{F8DA9627-4A29-46A4-9172-D9E33B1AB80F} = {6D4A18D0-E664-486F-9D4F-1F37BC881C85}
+		{107D59B0-B933-4D70-902B-6BC14B935826} = {6D4A18D0-E664-486F-9D4F-1F37BC881C85}
 	EndGlobalSection
 EndGlobal
