@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
+	<ItemGroup>
 	  <PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="6.2.1" />
 	  <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.13" />

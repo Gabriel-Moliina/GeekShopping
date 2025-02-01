@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using GeekShopping.ProductAPI.Model.Base;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using GeekShopping.ProductAPI.Model.Base;
 
 namespace GeekShopping.ProductAPI.Model
 {
@@ -14,7 +14,7 @@ namespace GeekShopping.ProductAPI.Model
 
         [Column("price")]
         [Required]
-        [Range(1, 10000)]
+        [Range(1,10000)]
         public decimal Price { get; set; }
 
         [Column("description")]
@@ -25,7 +25,7 @@ namespace GeekShopping.ProductAPI.Model
         [StringLength(50)]
         public string CategoryName { get; set; }
 
-        [Column("imagem_url")]
+        [Column("image_url")]
         [StringLength(300)]
         public string ImageURL { get; set; }
     }

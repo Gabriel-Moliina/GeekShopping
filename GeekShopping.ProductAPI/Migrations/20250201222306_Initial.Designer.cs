@@ -10,15 +10,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeekShopping.ProductAPI.Migrations
 {
     [DbContext(typeof(MySQLContext))]
-    [Migration("20250130233354_SeedProductDataTable")]
-    partial class SeedProductDataTable
+    [Migration("20250201222306_Initial")]
+    partial class Initial
     {
-        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.20")
+                .HasAnnotation("ProductVersion", "6.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("GeekShopping.ProductAPI.Model.Product", b =>
@@ -26,7 +25,7 @@ namespace GeekShopping.ProductAPI.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasColumnName("Id");
+                        .HasColumnName("id");
 
                     b.Property<string>("CategoryName")
                         .IsRequired()
@@ -44,7 +43,7 @@ namespace GeekShopping.ProductAPI.Migrations
                         .IsRequired()
                         .HasMaxLength(300)
                         .HasColumnType("varchar(300)")
-                        .HasColumnName("imagem_url");
+                        .HasColumnName("image_url");
 
                     b.Property<string>("Name")
                         .IsRequired()
