@@ -1,9 +1,12 @@
-﻿using System;
-using System.Text;
-using System.Text.Json;
-using GeekShopping.CartAPI.Messages;
+﻿using GeekShopping.CartAPI.Messages;
 using GeekShopping.MessageBus;
 using RabbitMQ.Client;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace GeekShopping.CartAPI.RabbitMQSender
 {
@@ -26,8 +29,8 @@ namespace GeekShopping.CartAPI.RabbitMQSender
             var factory = new ConnectionFactory
             {
                 HostName = _hostName,
-                Password = _password,
-                UserName = _userName
+                UserName = _userName,
+                Password = _password
             };
             _connection = factory.CreateConnection();
 
@@ -35,7 +38,7 @@ namespace GeekShopping.CartAPI.RabbitMQSender
             channel.QueueDeclare(queue: queueName, false, false, false, arguments: null);
             byte[] body = GetMessageAsByteArray(message);
             channel.BasicPublish(
-                exchange: "", routingKey: queueName, basicProperties: null, body);
+                exchange: "", routingKey: queueName, basicProperties: null, body: body);
         }
 
         private byte[] GetMessageAsByteArray(BaseMessage message)
@@ -44,9 +47,9 @@ namespace GeekShopping.CartAPI.RabbitMQSender
             {
                 WriteIndented = true,
             };
-
-            var json = JsonSerializer.Serialize((CheckoutHeaderVO)message, options: options);
-            return Encoding.UTF8.GetBytes(json); ;
+            var json = JsonSerializer.Serialize<CheckoutHeaderVO>((CheckoutHeaderVO)message, options);
+            var body = Encoding.UTF8.GetBytes(json);
+            return body;
         }
     }
 }
